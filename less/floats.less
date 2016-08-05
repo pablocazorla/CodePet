@@ -1,0 +1,171 @@
+.float{
+	position: absolute;
+	z-index: 10000;
+	top:100%;
+	left: -1 *@float-triangle-width;
+	background-color: @background-color-alt;
+	box-shadow:@box-shadow;
+	border-radius:@border-radius;
+/*
+	overflow: hidden;
+	opacity: 0;
+	height: 0;
+	.transition(opacity .2s);
+*/	
+	//display: none;
+
+	&:before{
+		position: absolute;
+		top:-2 * @float-triangle-width;
+		left: @float-triangle-width;
+		display: block;
+		width: 0;height: 0;
+		content: '';
+		border-width: @float-triangle-width;
+		border-style: solid;
+		border-color: transparent transparent @background-color-alt;
+	}
+
+	&.right{
+		left:auto;
+		right: -1 *@float-triangle-width;
+		&:before{
+			left:auto;
+			right: @float-triangle-width;
+		}
+	}
+
+	&.center{
+		left:50%;
+		&:before{
+			left:50%;
+			margin-left: -1 * @float-triangle-width;
+		}		
+	}
+
+	&.no-float{
+		position: relative;
+		top: auto;left: auto;
+	}
+
+	&.show{
+		overflow: visible;
+		opacity: 1;
+		height: auto;
+	}
+
+
+	.float-menu{
+		color: @color-light;
+		font-size: @font-size;
+		font-weight: @bold;	
+		padding-bottom: 10px;
+
+		.link{
+			display: block;
+			line-height: 32px;
+			text-align: left;
+			padding: 0 16px;
+			&.sub{
+				font-size: 12px;
+				font-weight: @normal;
+				line-height: 20px;
+				padding-left: 32px;
+			}
+			.fa{
+				width: 12px;
+			}
+			&:hover{
+				text-decoration: underline;
+			}
+			&.unlink{
+				cursor: default;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.tip{
+	position: absolute;
+	background-color: @color;
+	color: @background-color-alt;
+	font-size: 12px;
+	line-height: 1.3em;
+	left:50%;
+	bottom: 100%;
+	width: 70px;
+	margin-left: -35px;
+	text-align: center;	
+	border-radius: @border-radius;
+
+	overflow: hidden;
+	opacity: 0;
+	height: 0;
+	padding: 0;
+	.transition(opacity .2s);
+
+	&:before{
+		position: absolute;
+		bottom:-2 * @float-triangle-width;
+		left: 50%;// @float-triangle-width;
+		display: block;
+		width: 0;height: 0;
+		content: '';
+		border-width: @float-triangle-width;
+		border-style: solid;
+		border-color: @color transparent transparent;
+		margin-left: -1 * @float-triangle-width;
+	}
+
+	&.right{
+		left: auto;
+		right: -1 * @float-triangle-width;
+		margin-left: 0;
+		&:before{
+			left: auto;
+			right: @float-triangle-width;
+		}
+		&.inline{
+			top:50%;
+			bottom: auto;
+			left: auto;
+			right: 100%;
+			margin: -13px @float-triangle-width 0 0;
+
+			&:before{
+				position: absolute;
+				top:50%;
+				margin-top:-1 * @float-triangle-width;
+				bottom:auto;
+				left: auto;
+				right: -2 * @float-triangle-width;
+				border-color: transparent transparent transparent @color;
+		
+			}
+		}
+	}
+	&.bottom{
+		top: 100%;
+		margin-top: 10px;
+		bottom: auto;
+		&:before{
+			top:-2 * @float-triangle-width;
+			bottom: auto;
+			border-color: transparent transparent @color;
+		}
+	}
+	&.w2{
+		width: 120px;
+		margin-left: -60px;
+	}
+
+}
+.tip-trigger:hover > .tip{
+	overflow: visible;
+	opacity: 1;
+	height: auto;
+	padding: 5px 0;
+}

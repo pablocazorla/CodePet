@@ -1,0 +1,122 @@
+.main-list{
+	position: absolute;
+	z-index: 2;
+	top:0;bottom: 0;
+	left: @main-sidebar-width;
+	width:@main-list-width;
+
+
+	.list-tools{
+		position: relative;
+		height: @top-bar-height;
+		border-bottom: @border;
+
+		.list-tools-cover{
+			position: absolute;
+			top: 0;bottom: 0;left: 0;right: 10px;
+			background-color: @background-color;
+			opacity: .7;
+		}
+
+		.list-menu,
+		.list-search{
+			position: absolute;
+			top: ((@top-bar-height - @main-list-tools-height)/2);
+			height: @main-list-tools-height;
+			line-height: @main-list-tools-height;
+		}
+
+		.list-menu{
+			left: @main-list-padding;
+			width: 12px;
+			color:@color-light2;
+			float:right;
+			font-size: 11px;
+			cursor:pointer;
+			.fa-bars{
+				position: relative;
+				line-height: @main-list-tools-height;
+			}
+			.float{
+				margin-left: -1px;
+			}
+		}
+		.list-search{
+			left: @main-list-padding + 18px;
+			right: @main-list-padding;
+			border: @border2;
+			border-radius: 18px;
+			.transition(background-color 0.2s);
+
+			input{
+				line-height: @main-list-tools-height - 2;
+				position: absolute;
+				top:0;
+				left:9px;
+				right:12px;
+				width: auto;
+			}
+			.fa{
+				position: absolute;
+				top: 0;bottom: 0;line-height: @main-list-tools-height;
+				right: 7px;
+				font-size: 11px;
+				width: 12px;
+				color:@color-light2;
+			}
+			&.focus{
+				background-color: @background-color-alt;
+			}
+		}
+	}
+	.list-empty{
+		text-align: center;
+		padding: 32px 10px;		
+		font-weight: @medium;
+		.text{
+			font-size: 17px;
+			line-height: 1.2em;
+			color: @color-light;
+			margin-bottom: 3px;
+		}
+		.color-add{
+			font-size: 12px;
+			line-height: 1.2em;
+			padding-right: 17px;
+		}
+	}
+	.scroller{
+		top:@top-bar-height;
+	}
+	ul{
+		padding: 9px 0 9px 9px;
+
+		li{
+			padding: 19px @main-list-padding 19px (@main-list-padding - 9px);
+			border-radius: @border-radius 0 0 @border-radius;
+			cursor: pointer;
+
+			.title{
+				font-size: 17px;
+				line-height: 1.1em;
+				font-weight: @medium;
+				margin-bottom: 6px;
+			}
+			.description{
+				line-height: 1.1em;
+				color:@color-light;
+			}
+			&:hover{
+				background-color: mix(@background-color-alt,transparent, 30%); 
+			}
+
+			&.current{
+				background-color: @background-color-alt;
+				box-shadow:@box-shadow;
+				cursor: default;
+			}
+
+			
+		}
+	}
+}
