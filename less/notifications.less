@@ -1,0 +1,22 @@
+// NOTIFICATIONS ******************************/
+#notifications-trail{
+  position: absolute;
+  z-index: 200000;
+  top: 10px;
+  right: 10px;
+  width: @notification-width;
+  height: 0;
+  .notification{
+    background-color:@notification-background-color;
+    box-shadow: @notification-box-shadow;
+    color:@notification-color;
+    padding:@notification-padding;
+    height:@notification-height;
+    margin-bottom:@notification-margin-bottom;
+    border: 1px solid @notification-border-color;
+    font-size: 12px;
+    cursor: default;    
+    .transition(margin-top 0.8s);
+    margin-top: -1 * (@notification-height + @notification-margin-bottom);
+  }
+}

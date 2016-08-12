@@ -1,0 +1,61 @@
+/* BUTTONS ******/
+
+.btn {
+  display: inline-block;
+  min-width: @btn-line-height;
+  height: @btn-line-height;
+  line-height: @btn-line-height - 2px;
+  padding: 0 @btn-padding;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: solid @btn-border-width transparent;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5 * @btn-line-height;
+  transition: all 0.1s;
+  .bold;
+  /* COLORS */
+  &.btn-primary {
+    .btn-color(@primary-color);
+  }
+  &.btn-danger {
+    .btn-color(@danger-color);
+  }
+  &.btn-save {
+    .btn-color(@save-color);
+  }
+  &.btn-cancel {
+    .btn-color(@cancel-color);
+  }
+  &.btn-grey {
+    .btn-color(@grey-color);
+  }
+  &.btn-small {
+    font-size: percentage(@btn-small-size);
+    min-width: @btn-small-size * @btn-line-height;
+    height: @btn-small-size * @btn-line-height;
+    line-height: @btn-small-size * @btn-line-height;
+    padding: 0 (@btn-small-size * @btn-padding);
+    border-radius: @btn-small-size * @btn-border-radius;
+  }
+  /* SHAPES */
+  &.btn-icon, &.btn-circle {
+    padding: 0;
+    font-size: 100%;
+  }
+  &.btn-separator{
+    padding: 0;
+    min-width: 0;
+  }
+  &.btn-circle {
+    border-radius: 52%;
+  }
+  &.btn-round {
+    border-radius: 0.5 * @btn-line-height;
+  }
+  &.btn-border{
+    border-color: @border-color;
+  }
+}

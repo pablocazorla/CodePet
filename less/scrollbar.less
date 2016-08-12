@@ -1,0 +1,24 @@
+/* SCROLLBAR ******/
+
+::-webkit-scrollbar {
+  background-color: rgba(200,200,200,0);
+  width: 0;
+  transition: background-color 0.2s;
+  -webkit-app-region: none;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: fade(@primary-color, 0%);
+  transition: background-color 0.2s;
+}
+div:hover::-webkit-scrollbar {
+	background-color: @scrollbar-background-color;
+	width: @scrollbar-width;
+}
+div:hover::-webkit-scrollbar-thumb {
+	background-color: @primary-color;
+	-webkit-app-region: none;
+}
+

@@ -1,4 +1,19 @@
-{"snippet_id":"iaT44pv0FlWwXo3W","order":1470352037108,"content":"","language":"plain_text","_id":"92jOnztdXEvlZaMD"}
-{"snippet_id":"0edVLws8BrX4DJRk","order":1470280226713,"content":"sadsad 1","language":"plain_text","_id":"CqrzmPdzGGeqEoSE"}
-{"snippet_id":"iaT44pv0FlWwXo3W","order":1470281082366,"content":"[{&quot;title&quot;:&quot;jQuery&quot;,\n    &quot;color&quot;:&quot;#39A4FF&quot;,\n    &quot;_id&quot;:&quot;N8swDFgG1IQwzE7s&quot;},\n{&quot;title&quot;:&quot;CSS&quot;,\n&quot;color&quot;:&quot;#FF6CBC&quot;,\n&quot;_id&quot;:&quot;kR1mINeJcTTfXCd8&quot;}]\n","language":"json","_id":"Zq1c7kLldBs5LiYr"}
-{"snippet_id":"0edVLws8BrX4DJRk","order":1470280237147,"content":"ewrwer 2","language":"plain_text","_id":"eM6xDbBQ54LjhTn0"}
+{"snippet_id":"sn5","order":1471041132884,"content":"var languageVM = function(data) {\n\tvar vm = {\n\t\ttitle: data.title,\n\t\tval: data.val\n\t};\n\n\tvm.setLanguage = function() {\n\t\tcurrentCode.language(vm.val);\n\t\tcurrentCode.languageTitle(vm.title);\n\t};\n\n\treturn vm;\n};","language":"plain_text","_id":"4u1PvB7nf0jLhSMD"}
+{"snippet_id":"sn9","order":1470959712916,"content":"Order 4","language":"plain_text","_id":"S4KXTIQzxDyIAuaY"}
+{"snippet_id":"sn9","order":1471013518988,"content":"kjhkjhkjhk","language":"plain_text","_id":"VgOWeLUOL7ZpVRiT"}
+{"_id":"cd1","order":1,"snippet_id":"sn0","content":"text content 1","language":"css"}
+{"_id":"cd6","order":3,"snippet_id":"sn1","content":"var languageVM = function(data) {\n\tvar vm = {\n\t\ttitle: data.title,\n\t\tval: data.val\n\t};\n\n\tvm.setLanguage = function() {\n\t\tcurrentCode.language(vm.val);\n\t\tcurrentCode.languageTitle(vm.title);\n\t};\n\n\treturn vm;\n};","language":"javascript"}
+{"_id":"cd7","order":7,"snippet_id":"sn2","content":"text content 7","language":"css"}
+{"_id":"cd8","order":8,"snippet_id":"sn2","content":"text content 8","language":"css"}
+{"_id":"cd9","order":9,"snippet_id":"sn2","content":"text content 9","language":"plain_text"}
+{"snippet_id":"sn9","order":1470959759592,"content":"Order 3","language":"plain_text","_id":"p4E5J6weoVwljybn"}
+{"snippet_id":"8xCEeLqJkZHJ5Qe4","order":1471042002741,"content":"as dsad sad asd sad sa","language":"less","_id":"s0zaO5HXBZngeMNC"}
+{"snippet_id":"sn9","order":1471007373239,"content":"Order 1","language":"plain_text","_id":"xBSV85JkIloos4wV"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044055025,"content":"","language":"plain_text","_id":"l5fJUOAbFpL8DPLt"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044068280,"content":"","language":"plain_text","_id":"izRyOMUIUvExAP8B"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044055025,"content":"","language":"plain_text","_id":"izRyOMUIUvExAP8B"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044068280,"content":"","language":"plain_text","_id":"l5fJUOAbFpL8DPLt"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044055025,"content":"dasd","language":"plain_text","_id":"izRyOMUIUvExAP8B"}
+{"$$deleted":true,"_id":"l5fJUOAbFpL8DPLt"}
+{"$$deleted":true,"_id":"izRyOMUIUvExAP8B"}
+{"snippet_id":"ni9wLv0gFLiR2Bdz","order":1471044110124,"content":"","language":"plain_text","_id":"SSILXuby0c65rPEc"}

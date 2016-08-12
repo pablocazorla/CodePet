@@ -16,15 +16,17 @@ function createWindow() {
 
   win = new BrowserWindow({
     width: 1600,
-    height: 950,
-    transparent: true,
-    frame: false,
-    hasShadow: false
+    height: 950
+    // ,
+    // transparent: true,
+    // frame: false,
+    // hasShadow: false
   });
   win.loadURL(`file://${__dirname}/index.html`);
 
   // Open the DevTools.
-  //win.webContents.openDevTools();
+  //
+     win.webContents.openDevTools();
 
   win.on('maximize', function(event) {
     event.sender.send('maximized-window');

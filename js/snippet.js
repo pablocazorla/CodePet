@@ -1,255 +1,6 @@
 (function() {
 	"use strict";
-	/* PRIVATE VARIABLES ***********************************************/
 
-	/**
-	 * List of availables languages for codes
-	 * @array
-	 */
-	var languagesAvailables = [{
-		title: 'Plain Text',
-		val: 'plain_text'
-	}, {
-		title: 'Abap',
-		val: 'abap'
-	}, {
-		title: 'Abc',
-		val: 'abc'
-	}, {
-		title: 'Actionscript',
-		val: 'actionscript'
-	}, {
-		title: 'Ada',
-		val: 'ada'
-	}, {
-		title: 'Apache conf',
-		val: 'apache_conf'
-	}, {
-		title: 'Applescript',
-		val: 'applescript'
-	}, {
-		title: 'Ascii',
-		val: 'asciidoc'
-	}, {
-		title: 'Assembly x86',
-		val: 'assembly_x86'
-	}, {
-		title: 'Autohotkey',
-		val: 'autohotkey'
-	}, {
-		title: 'Batch file',
-		val: 'batchfile'
-	}, {
-		title: 'Cirru',
-		val: 'cirru'
-	}, {
-		title: 'Clojure',
-		val: 'clojure'
-	}, {
-		title: 'COBOL',
-		val: 'cobol'
-	}, {
-		title: 'Coffeescript',
-		val: 'coffee'
-	}, {
-		title: 'Coldfusion',
-		val: 'coldfusion'
-	}, {
-		title: 'C#',
-		val: 'csharp'
-	}, {
-		title: 'CSS',
-		val: 'css'
-	}, {
-		title: 'Curly',
-		val: 'curly'
-	}, {
-		title: 'C cpp',
-		val: 'c_cpp'
-	}, {
-		title: 'D',
-		val: 'd'
-	}, {
-		title: 'Dart',
-		val: 'dart'
-	}, {
-		title: 'Diff',
-		val: 'diff'
-	}, {
-		title: 'Django',
-		val: 'django'
-	}, {
-		title: 'Docker file',
-		val: 'dockerfile'
-	}, {
-		title: 'Dot',
-		val: 'dot'
-	}, {
-		title: 'Eiffel',
-		val: 'eiffel'
-	}, {
-		title: 'EJS',
-		val: 'ejs'
-	}, {
-		title: 'Elixir',
-		val: 'elixir'
-	}, {
-		title: 'ELM',
-		val: 'elm'
-	}, {
-		title: 'Erlang',
-		val: 'erlang'
-	}, {
-		title: 'Forth',
-		val: 'forth'
-	}, {
-		title: 'FTL',
-		val: 'ftl'
-	}, {
-		title: 'G code',
-		val: 'gcode'
-	}, {
-		title: 'Gherkin',
-		val: 'gherkin'
-	}, {
-		title: 'Git Ignore',
-		val: 'gitignore'
-	}, {
-		title: 'GLSL',
-		val: 'glsl'
-	}, {
-		title: 'Gobstones',
-		val: 'gobstones'
-	}, {
-		title: 'Golang',
-		val: 'golang'
-	}, {
-		title: 'Groovy',
-		val: 'groovy'
-	}, {
-		title: 'HAML',
-		val: 'haml'
-	}, {
-		title: 'Handlebars',
-		val: 'handlebars'
-	}, {
-		title: 'Haskell',
-		val: 'haskell'
-	}, {
-		title: 'Haxe',
-		val: 'haxe'
-	}, {
-		title: 'HTML',
-		val: 'html'
-	}, {
-		title: 'Java',
-		val: 'java'
-	}, {
-		title: 'Javascript',
-		val: 'javascript'
-	}, {
-		title: 'JSON',
-		val: 'json'
-	}, {
-		title: 'JSP',
-		val: 'jsp'
-	}, {
-		title: 'Lean',
-		val: 'lean'
-	}, {
-		title: 'Less CSS',
-		val: 'less'
-	}, {
-		title: 'Liquid',
-		val: 'liquid'
-	}, {
-		title: 'Lisp',
-		val: 'lisp'
-	}, {
-		title: 'Livescript',
-		val: 'livescript'
-	}, {
-		title: 'Lua',
-		val: 'lua'
-	}, {
-		title: 'Makefile',
-		val: 'makefile'
-	}, {
-		title: 'Markdown',
-		val: 'markdown'
-	}, {
-		title: 'Matlab',
-		val: 'matlab'
-	}, {
-		title: 'MySQL',
-		val: 'mysql'
-	}, {
-		title: 'Objective C',
-		val: 'objectivec'
-	}, {
-		title: 'Ocaml',
-		val: 'ocaml'
-	}, {
-		title: 'Pascal',
-		val: 'pascal'
-	}, {
-		title: 'Perl',
-		val: 'perl'
-	}, {
-		title: 'PHP',
-		val: 'php'
-	}, {
-		title: 'Powershell',
-		val: 'powershell'
-	}, {
-		title: 'Prolog',
-		val: 'prolog'
-	}, {
-		title: 'Python',
-		val: 'python'
-	}, {
-		title: 'Razor',
-		val: 'razor'
-	}, {
-		title: 'Ruby',
-		val: 'ruby'
-	}, {
-		title: 'SASS CSS',
-		val: 'sass'
-	}, {
-		title: 'Scheme',
-		val: 'scheme'
-	}, {
-		title: 'SCSS',
-		val: 'scss'
-	}, {
-		title: 'SH',
-		val: 'sh'
-	}, {
-		title: 'SJS',
-		val: 'sjs'
-	}, {
-		title: 'SQL',
-		val: 'sql'
-	}, {
-		title: 'SQL Server',
-		val: 'sqlserver'
-	}, {
-		title: 'SVG',
-		val: 'svg'
-	}, {
-		title: 'Typescript',
-		val: 'typescript'
-	}, {
-		title: 'Vala',
-		val: 'vala'
-	}, {
-		title: 'VB script',
-		val: 'vbscript'
-	}, {
-		title: 'XML',
-		val: 'xml'
-	}];
 
 
 	/* PRIVATE VIEWMODELS ***********************************************/
@@ -265,10 +16,11 @@
 			order: data.order,
 			content: ko.observable(data.content.replace(/&quot;/g, '"')),
 			language: ko.observable(data.language),
-			languagesAvailables: languagesAvailables,
+			languageTitle: ko.observable(''),
 			show: ko.observable(true),
 			editing: ko.observable(false),
-			deleting: ko.observable(false)
+			canMoveUp: ko.observable(false),
+			canMoveDown: ko.observable(false)
 		};
 
 		var editor = null;
@@ -310,6 +62,7 @@
 				CodePet.data.update('codes', vm._id, {
 					'content': vFormatted
 				});
+				CodePet.notifications.fire('Saved Code.');
 			}
 		};
 		vm.cancelEdit = function() {
@@ -317,21 +70,42 @@
 			editor.setValue(vm.content(), -1);
 		};
 
-		vm.showDelete = function() {
-			vm.deleting(true);
-		};
-		vm.hideDelete = function() {
-			vm.deleting(false);
+		vm.updateLanguageSelector = function() {
+			CodePet.popupCodeLanguageSelector.update(vm);
 		};
 
 		vm.deleteCode = function() {
-			// delete Tag
-			CodePet.data.delete('codes', vm._id, function() {
-				CodePet.snippetVM.quitCodeFromList(vm._id);
-			});
+			CodePet.modalDeleteCode.update(vm._id);
 		};
 
 
+
+		vm.moveDown = function() {
+			CodePet.snippetVM.moveDown(vm._id);
+		};
+
+		vm.moveUp = function() {
+			CodePet.snippetVM.moveUp(vm._id);
+		};
+
+		vm.copy = function(){
+			CodePet.setClipboard(vm.content());
+			CodePet.notifications.fire('Copied to clipboard.');
+		};
+
+
+		vm.languageTitle((function() {
+			var le = CodePet.languagesAvailables.length,
+				val = vm.language(),
+				title = '';
+
+			for (var i = 0; i < le; i++) {
+				if (CodePet.languagesAvailables[i].val === val) {
+					title = CodePet.languagesAvailables[i].title;
+				}
+			}
+			return title;
+		})());
 
 		vm.language.subscribe(function(v) {
 			editor.session.setMode('ace/mode/' + v);
@@ -365,11 +139,9 @@
 			title: ko.observable(),
 			description: ko.observable(),
 			tags: ko.observableArray(),
-			tagsLeft: ko.observableArray(),
-			addingTag: ko.observable(false),
+			couldAddTag: ko.observable(true),
 			editingTitle: ko.observable(false),
 			editingDescription: ko.observable(false),
-			deleting: ko.observable(false),
 			codes: ko.observableArray(),
 			empty: ko.observable(true),
 			onUpdate: ko.observable(0)
@@ -383,6 +155,25 @@
 			titleCache = '',
 			// Cache for description when edit
 			descriptionCache = '';
+
+		var updateSortButtons = function() {
+			
+				var length = vm.codes().length;
+				vm.codeEach(function(cVM, index) {
+					if (index == 0) {
+						cVM.canMoveUp(false);
+					} else {
+						cVM.canMoveUp(true);
+					}
+
+					if (index == (length - 1)) {
+						cVM.canMoveDown(false);
+					} else {
+						cVM.canMoveDown(true);
+					}
+				});
+			
+		};
 
 		/* COMPUTED VARIABLES ***********************************************/
 
@@ -411,6 +202,9 @@
 			} else {
 				return t;
 			}
+		});
+		vm.emptyCode = ko.computed(function() {
+			return vm.codes().length <= 0;
 		});
 
 		var updateCount = 0; // Ready counter for execute onUpdate
@@ -448,7 +242,7 @@
 						var newCodeVM = codeVM(data[i]);
 
 						listcodes.push(newCodeVM);
-				
+
 					}
 
 					listcodes.sort(sortCriteria);
@@ -462,7 +256,7 @@
 					updateCount++;
 					vm.onUpdate(updateCount);
 				});
-			} else {
+			} else {				
 				vm.empty(true);
 				updateCount++;
 				vm.onUpdate(updateCount);
@@ -474,15 +268,9 @@
 			CodePet.snippetListVM.addSnippet();
 		};
 
-		vm.showDeleting = function() {
-			vm.deleting(true);
-		};
-		vm.hideDeleting = function() {
-			vm.deleting(false);
-		};
+
 		vm.deleteSnippet = function() {
-			vm.deleting(false);
-			CodePet.snippetListVM.deleteSnippet(vm._id);
+			CodePet.modalDeleteSnippet.update(vm._id);
 		};
 
 		/**
@@ -509,6 +297,7 @@
 				CodePet.data.update('snippets', vm._id, {
 					title: newTitle
 				});
+				CodePet.notifications.fire('Updated Title Snippet.');
 			}
 		};
 
@@ -536,6 +325,7 @@
 				CodePet.data.update('snippets', vm._id, {
 					description: newDescription
 				});
+				CodePet.notifications.fire('Updated Description Snippet.');
 			}
 		};
 
@@ -555,32 +345,18 @@
 				}
 			});
 			vm.tags(tagsList);
-			vm.tagsLeft(tagsLeftList);
+			CodePet.popupAddTag.tagsLeft(tagsLeftList);
+			vm.couldAddTag(tagsLeftList.length > 0);
 		};
 
-		/**
-		 * Show add tag option
-		 * @function
-		 */
-		vm.showAddingTag = function() {
-			vm.addingTag(true);
-		};
 
-		/**
-		 * Hide add tag option
-		 * @function
-		 */
-		vm.hideAddingTag = function() {
-			vm.addingTag(false);
-		};
 
 		/**
 		 * Add tag to snippet
 		 * @function
 		 */
 		vm.addTagToSnippet = function(tid) {
-			var tagID = (typeof tid === 'string') ? tid : this._id;
-			vm.hideAddingTag();
+			var tagID = (typeof tid === 'string') ? tid : tid._id;
 			CodePet.tbs.addTag(vm._id, tagID);
 		};
 
@@ -595,17 +371,18 @@
 
 		vm.addCode = function() {
 			var t = new Date().getTime();
+			var defaultLanguage = CodePet.languagesAvailables[0].val;
 			CodePet.data.add('codes', {
 				'snippet_id': vm._id,
 				'order': t,
 				'content': '',
-				'language': languagesAvailables[0].val
+				'language': defaultLanguage
 			}, function(data) {
 				var newCodeVM = codeVM({
 					'_id': data._id,
 					'order': t,
 					'content': '',
-					'language': languagesAvailables[0].val
+					'language': defaultLanguage
 				});
 				//
 				vm.codes.splice(0, 0, newCodeVM);
@@ -636,7 +413,67 @@
 					vm.codes.splice(indextoQuit, 1);
 				}, 400);
 			}
-		}
+		};
+
+
+		vm.moveDown = function(id) {
+			var indextoMove = 9999,
+				list = vm.codes(),
+				length = list.length;
+			vm.codeEach(function(cVM, index) {
+				if (cVM._id == id) {
+					indextoMove = index;
+				}
+			});
+			++indextoMove;
+			if (indextoMove < length) {
+				var order1 = list[indextoMove - 1].order,
+					order2 = list[indextoMove].order,
+					id1 = list[indextoMove - 1]._id,
+					id2 = list[indextoMove]._id;
+
+				list[indextoMove - 1].order = order2;
+				list[indextoMove].order = order1;
+
+				vm.codes.sort(sortCriteria);
+				// to db
+				CodePet.data.update('codes', id1, {
+					'order': order2
+				});
+				CodePet.data.update('codes', id2, {
+					'order': order1
+				});
+			}
+		};
+
+		vm.moveUp = function(id) {
+			var indextoMove = -1,
+				list = vm.codes();
+			vm.codeEach(function(cVM, index) {
+				if (cVM._id == id) {
+					indextoMove = index;
+				}
+			});
+			--indextoMove;
+			if (indextoMove >= 0) {
+				var order1 = list[indextoMove + 1].order,
+					order2 = list[indextoMove].order,
+					id1 = list[indextoMove + 1]._id,
+					id2 = list[indextoMove]._id;
+
+				list[indextoMove + 1].order = order2;
+				list[indextoMove].order = order1;
+
+				vm.codes.sort(sortCriteria);
+				// to db
+				CodePet.data.update('codes', id1, {
+					'order': order2
+				});
+				CodePet.data.update('codes', id2, {
+					'order': order1
+				});
+			}			
+		};
 
 
 
@@ -668,6 +505,11 @@
 			if (currentFromList) {
 				currentFromList.description(v);
 			}
+		});
+
+		vm.codes.subscribe(function() {
+			CodePet.floats.update();
+			updateSortButtons();
 		});
 
 		/**

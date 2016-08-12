@@ -1,0 +1,182 @@
+// LIST ******************************
+#snippetListVM {
+  position: absolute;
+  top: @header-height;
+  left: @sidebar-width;
+  bottom: 0;
+  width: @list-width;
+  .block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    &.header {
+      top: 0;
+      height: @header-section-height;
+      border-right: 1px solid @list-li-border-color;
+      .toolbox {
+        position: absolute;
+        top: 50%;
+        left: @list-li-padding;
+        right: @list-li-padding;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: @btn-line-height;
+        .toolbox-search {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: (2 * @btn-line-height) + 8px;
+          .input-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: @btn-line-height;
+            input {
+              font-size: 12px;
+              box-shadow: none;
+              border-radius: @input-line-height 0 0 @input-line-height;
+            }
+          }
+          .btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFF;
+            border-radius: 0 @input-line-height @input-line-height 0;
+            i {
+              color: @body-color-alt;
+              position: relative;
+              top: -1px;
+              left: -1px;
+            }
+          }
+        }
+        .toolbox-actions {
+          text-align: right;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      hr {
+        position: absolute;
+        bottom: 0;
+        left: @list-li-padding;
+        right: 0;
+      }
+    }
+    &.list {
+      top: @header-section-height;
+      bottom: 0;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+  ul {
+    li {
+      padding: @list-li-padding-top @list-li-padding 0;
+      position: relative;
+      color: @list-li-color;
+      border-right: 1px solid @list-li-border-color;
+      cursor: pointer;
+      transition: background-color 0.1s;
+      overflow: hidden;
+      -webkit-animation: showLiSnippet 0.4s 1;
+      -webkit-animation-fill-mode: both;
+      height: 0;
+      .title {
+        .bold;
+        margin-bottom: @list-li-title-margin;
+      }
+      .description {
+        font-size: @list-li-description-font-size;
+        line-height: 1.3em;
+        overflow: hidden;
+        height: 2.6em;
+        .light;
+      }
+      hr {
+        position: absolute;
+        bottom: 0;
+        left: @list-li-padding;
+        right: 0;
+      }
+      &:hover {
+        background-color: fade(@content-background-color, 50%);
+      }
+      &.current {
+        color: @content-color;
+        background-color: @content-background-color;
+        hr {
+          display: none;
+        }
+        box-shadow: 0 0 0 1px @list-li-border-color;
+        border-right:none;
+        cursor:default;
+      }
+    }
+  }
+  ul {
+    .delay(2);
+    .delay(3);
+    .delay(4);
+    .delay(5);
+    .delay(6);
+    .delay(7);
+    .delay(8);
+    .delay(9);
+    .delay(10);
+    .delay(11);
+    .delay(12);
+    .delay(13);
+    .delay(14);
+    .delay(15);
+    .delay(16);
+    .delay(17);
+    .delay(18);
+    .delay(19);
+    .delay(20);
+    .delay(21);
+    .delay(22);
+    .delay(23);
+    .delay(24);
+    .delay(25);
+    .delay(26);
+    .delay(27);
+    .delay(28);
+    .delay(29);
+    .delay(30);
+  }
+}
+.empty-snippet-list {
+  text-align: center;
+  padding: 25px 0;
+  line-height: 1.6em;
+  span {
+    font-size: 75%;
+    color: @primary-color;
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: darken(@primary-color, 10%)
+    }
+  }
+}
+.nothing-found-snippet-list{
+  text-align: center;
+  padding: 25px 0;
+  line-height: 1.6em;
+  font-style: italic;
+  .light;
+}
+@-webkit-keyframes showLiSnippet {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 84px;
+  }
+}

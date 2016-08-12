@@ -13,7 +13,7 @@
 		/* VM TO RETURN ***********************************************/
 		var vm = {
 			_id: data._id,
-			order:data.order,
+			order: data.order,
 			title: ko.observable(data.title),
 			description: ko.observable(data.description),
 			current: ko.observable(false),
@@ -69,7 +69,7 @@
 			if (!vm.current()) {
 				CodePet.snippetListVM.current(vm._id);
 				// Load Snippet
-				CodePet.snippetVM.update(vm);				
+				CodePet.snippetVM.update(vm);
 			}
 		};
 
@@ -98,9 +98,8 @@
 		var vm = {
 			list: ko.observableArray(),
 			current: ko.observable(0),
-			shownMenu: ko.observable(false),
 			searchFocus: ko.observable(false),
-
+			nothingFound: ko.observable(false),
 			searchString: ko.observable(''),
 			onUpdate: ko.observable(0)
 		};
@@ -113,7 +112,7 @@
 
 		/* PRIVATE METHODS *************************************************/
 
-		var dictionary;
+		var dictionary = [];
 
 		vm.updateDictionary = function() {
 			dictionary = [];
@@ -177,8 +176,8 @@
 				newList[0].setCurrent();
 				newList[0].current(true);
 			}
-			
-			dictionary = [];
+
+
 			vm.searchString('');
 			vm.updateDictionary();
 
@@ -191,7 +190,7 @@
 
 			var tagID = CodePet.tagListVM.current();
 			var listIDs = CodePet.tbs.getSnippets(tagID);
-					
+
 
 			if (listIDs === 'all') {
 				CodePet.data.getAll('snippets', fillList);
@@ -199,7 +198,7 @@
 				var listIDsLength = listIDs.length;
 				if (listIDsLength == 0) {
 
-					vm.list([]);
+					vm.list([]);					
 					updateCount++;
 					vm.onUpdate(updateCount);
 				} else {
@@ -217,18 +216,11 @@
 			}
 		};
 
-		vm.showMenu = function() {
-			vm.shownMenu(true);
-		};
-		vm.hideMenu = function() {
-			vm.shownMenu(false);
-		};
 		vm.orderBy = function(str) {
-			if (vm.shownMenu()) {
-				vm.shownMenu(false);
-				criteria = str;
-				sort();
-			}
+
+			criteria = str;
+			sort();
+
 		};
 
 		/**
@@ -256,7 +248,7 @@
 
 
 		vm.addSnippet = function() {
-			vm.hideMenu();
+			
 			var t = new Date().getTime();
 			CodePet.data.add('snippets', {
 				'order': t,
@@ -279,7 +271,7 @@
 				vm.onUpdate(updateCount);
 
 				var tagID = CodePet.tagListVM.current();
-	
+
 				if (tagID !== 'all') {
 					CodePet.snippetVM.addTagToSnippet(tagID);
 				}
@@ -288,10 +280,12 @@
 		};
 
 		vm.deleteSnippet = function(id) {
-			CodePet.data.delete('snippets',id,function(){
+			CodePet.data.delete('snippets', id, function() {
 				vm.update();
 				CodePet.allSnippetsListVM.update();
-				CodePet.data.deleteBy('tagBySnippet',{snippet_id:id},function(){
+				CodePet.data.deleteBy('tagBySnippet', {
+					snippet_id: id
+				}, function() {
 					CodePet.tbs.update();
 				});
 			});
@@ -322,29 +316,35 @@
 		});
 		vm.empty.subscribe(function(v) {
 			if (v) {
-				//CodePet.snippetVM.update(null);
+				CodePet.snippetVM.update(null);
 			}
 		});
 		vm.searchString.subscribe(function(v) {
-			// if (dictionary.length > 0) {
-			// 	if (v.length > 2) {
-			// 		var t = v.toLowerCase();
-			// 		// Search in dictionary
-			// 		var length = dictionary.length;
-			// 		for (var i = 0; i < length; i++) {
-			// 			var sVM = vm.getById(dictionary[i]._id);
-			// 			if (dictionary[i].text.indexOf(t) >= 0) {
-			// 				sVM.shown(true);
-			// 			} else {
-			// 				sVM.shown(false);
-			// 			}
-			// 		}
-			// 	} else {
-			// 		vm.each(function(sVM) {
-			// 			sVM.shown(true);
-			// 		});
-			// 	}
-			// }
+			vm.nothingFound(false);
+			if (dictionary.length > 0) {
+				if (v.length >= 2) {
+					var t = v.toLowerCase();
+					// Search in dictionary
+					var length = dictionary.length;
+					var someResult = false;
+					for (var i = 0; i < length; i++) {
+						var sVM = vm.getById(dictionary[i]._id);
+						if (dictionary[i].text.indexOf(t) >= 0) {
+							sVM.shown(true);
+							someResult = true;
+						} else {
+							sVM.shown(false);
+						}
+					}
+					if(!someResult){
+						vm.nothingFound(true);
+					}
+				} else {
+					vm.each(function(sVM) {
+						sVM.shown(true);
+					});
+				}
+			}
 		});
 
 		/**

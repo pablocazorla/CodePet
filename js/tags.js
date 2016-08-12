@@ -1,18 +1,6 @@
 (function() {
 	"use strict";
 
-	/* PRIVATE VARIABLES ***********************************************/
-
-	/**
-	 * List of availables colors for tags
-	 * @array
-	 */
-	var colorsAvaliables = ['#CD6CFF', '#FF6CBC', '#C17DA2', '#FF5454', '#C18F7D', '#FF8B52', '#FFA200', '#0AD200', '#CDB972', '#A0B300', '#B0A75D', '#97B379', '#79B3AB', '#2CC2C7', '#39A4FF', '#AEB2C5', '#7D9BC1', '#9587ED'],
-		colorRandom = function() {
-			var i = Math.floor(Math.random() * colorsAvaliables.length);
-			return colorsAvaliables[i];
-		};
-
 	/* PRIVATE VIEWMODELS ***********************************************/
 
 	/**
@@ -27,45 +15,9 @@
 			_id: data._id,
 			title: ko.observable(data.title),
 			color: ko.observable(data.color),
-			current: ko.observable(false),
-			showEditor: ko.observable(false),
-			editMode: ko.observable(false),
-			inputFocus: ko.observable(false),
+			current: ko.observable(false),	
 			num:ko.observable(0)
 		};
-
-		/* PRIVATE VARIABLES ***********************************************/
-
-		// Cache for title when edit
-		var titleCache = '',
-			// Cache for title when edit
-			colorCache = '';
-
-		/* VARIABLES ***********************************************/
-
-		/**
-		 * List of Color VMs used to change and apply tag color
-		 * @array
-		 */
-		vm.colorList = (function() {
-			var newlist = [],
-				colorVM = function(col) {
-					var vmColor = {
-						col: col,
-						setColor: function() {
-							vm.color(col);
-						}
-					};
-					vmColor.current = ko.computed(function() {
-						return vmColor.col === vm.color();
-					});
-					return vmColor;
-				}
-			for (var i = 0; i < colorsAvaliables.length; i++) {
-				newlist.push(colorVM(colorsAvaliables[i]));
-			}
-			return newlist;
-		})();
 
 		/* COMPUTED VARIABLES ***********************************************/
 
@@ -88,63 +40,7 @@
 		 * @function
 		 */
 		vm.editTag = function() {
-			titleCache = vm.title();
-			colorCache = vm.color();
-			CodePet.tagListVM.showEditor(vm._id);
-			vm.inputFocus(true);
-		};
-		vm.cancelEditTag = function() {
-			vm.title(titleCache);
-			vm.color(colorCache);
-			CodePet.tagListVM.showEditor(-1);
-		};
-
-		/**
-		 * Save the new title of the tag
-		 * @function
-		 */
-		vm.saveEdit = function() {
-			var newTitle = jQuery.trim(vm.title());
-			if (newTitle !== '' && newTitle !== titleCache) {
-				// update Title
-				CodePet.data.update('tags', vm._id, {
-					'title': newTitle
-				});
-			} else {
-				vm.title(titleCache);
-			}
-			if (vm.color() !== colorCache) {
-				// update Color			
-				CodePet.data.update('tags', vm._id, {
-					'color': vm.color()
-				});
-			}
-			CodePet.tagListVM.showEditor(-1);
-		};
-
-		/**
-		 * Change the 'delete' mode to true
-		 * @function
-		 */
-		vm.deleteTag = function() {
-			vm.editMode(false);
-		};
-
-		vm.cancelDeleteTag = function() {
-			CodePet.tagListVM.showEditor(-1);
-		};
-
-		/**
-		 * Delete tag
-		 * @function
-		 */
-		vm.deleteTagYes = function() {
-			// delete Tag
-			CodePet.data.delete('tags', vm._id,function(){
-				CodePet.data.deleteBy('tagBySnippet', {tag_id:vm._id});
-			});
-			CodePet.tagListVM.quitFromList(vm._id);
-			CodePet.tagListVM.showEditor(-1);
+			CodePet.popupTagEdit.update(vm);		
 		};
 
 		/**
@@ -152,7 +48,7 @@
 		 * @function
 		 */
 		vm.setCurrent = function() {
-			if (!vm.current() && !vm.showEditor()) {
+			if (!vm.current()) {
 				CodePet.allSnippetsListVM.current(false);
 				// Set current by id tag
 				CodePet.tagListVM.current(vm._id);
@@ -243,8 +139,6 @@
 		var vm = {
 			list: ko.observableArray([]),
 			current: ko.observable('all'),
-			showEditor: ko.observable(-1),
-			shownMenu: ko.observable(false),
 			onUpdate: ko.observable(0)
 		};
 
@@ -316,9 +210,9 @@
 		 * @function
 		 */
 		vm.add = function() {
-			vm.shownMenu(false);
+
 			// save New Tag
-			var newColor = colorRandom();
+			var newColor = CodePet.popupTagEdit.colorRandom();
 
 
 
@@ -332,26 +226,17 @@
 					'color': newColor
 				});
 				vm.list.splice(0, 0, newTagVM);
-				newTagVM.editTag();
+
+				setTimeout(function(){
+					$('#edit_tag_'+dataObject._id).click();								
+				},200);
+				
 			});
+		};		
 
-
-
-		};
-
-		vm.showMenu = function() {
-			vm.shownMenu(true);
-		};
-		vm.hideMenu = function() {
-			vm.shownMenu(false);
-		};
-
-		vm.orderBy = function(str) {
-			if (vm.shownMenu()) {
-				vm.shownMenu(false);
+		vm.orderBy = function(str) {		
 				criteria = str;
-				sort();
-			}
+				sort();			
 		};
 
 		/**
@@ -413,6 +298,12 @@
 
 		/* SUBSCRIPTIONS ***************************************************/
 
+		vm.list.subscribe(function() {
+			CodePet.floats.update();
+		});
+
+
+
 		/**
 		 * When current changes, set current the right tag VM
 		 * @subscription
@@ -427,16 +318,7 @@
 			});
 		});
 
-		vm.showEditor.subscribe(function(v) {
-			vm.each(function(tVM) {
-				if (tVM._id == v) {
-					tVM.editMode(true);
-					tVM.showEditor(true);
-				} else {
-					tVM.showEditor(false);
-				}
-			});
-		});
+	
 
 		/**
 		 * When list changes, set onReady
@@ -460,6 +342,39 @@
 
 		/* RETURN VM ***************************************************/
 
+		return vm;
+	})();
+
+	CodePet.addTagBtnVM = (function() {
+		var vm = {
+			addTag:function(){
+				CodePet.tagListVM.add();
+			}
+		}
+		/**
+		 * Init and bind VM
+		 * @function
+		 */
+		vm.init = function() {
+			ko.applyBindings(vm, document.getElementById('add-tag-btn'));	
+		};
+		return vm;
+	})();
+
+	/* PREFERENCES **********************/
+	CodePet.preferencesVM = (function() {
+		var vm = {
+			show:function(){
+				CodePet.modalPreferences.show();
+			}
+		}
+		/**
+		 * Init and bind VM
+		 * @function
+		 */
+		vm.init = function() {
+			ko.applyBindings(vm, document.getElementById('preferencesVM'));	
+		};
 		return vm;
 	})();
 })();

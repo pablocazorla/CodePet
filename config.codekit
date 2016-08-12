@@ -3687,11 +3687,56 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
+	"\/css\/buttons.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/buttons.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/float.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/float.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/font-awesome.min.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/font-awesome.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/form.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/form.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/header.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/header.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/scrollbar.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/scrollbar.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3704,28 +3749,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/img\/brand.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2636,
-		"inputAbbreviatedPath": "\/img\/brand.png",
-		"outputAbbreviatedPath": "\/img\/brand.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/select-bg.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 170,
-		"inputAbbreviatedPath": "\/img\/select-bg.png",
-		"outputAbbreviatedPath": "\/img\/select-bg.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/index.html": {
 		"fileType": 8192,
@@ -3753,6 +3776,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/boot.js",
 		"outputAbbreviatedPath": "\/js\/min\/boot-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/floats-modals.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/floats-modals.js",
+		"outputAbbreviatedPath": "\/js\/min\/floats-modals-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -3791,6 +3825,17 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
+	"\/js\/libs\/jquery.float.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/jquery.float.js",
+		"outputAbbreviatedPath": "\/js\/libs\/min\/jquery.float-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/libs\/knockout.custom.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -3819,6 +3864,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/libs\/min\/knockout.custom-min.js",
 		"outputAbbreviatedPath": "\/js\/libs\/min\/min\/knockout.custom-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/notifications.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/notifications.js",
+		"outputAbbreviatedPath": "\/js\/min\/notifications-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -3890,159 +3946,65 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js_OLD\/app.js": {
-		"fileType": 64,
+	"\/less\/_colors.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/app.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/app-min.js",
+		"inputAbbreviatedPath": "\/less\/_colors.less",
+		"outputAbbreviatedPath": "\/css\/_colors.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
 		},
-	"\/js_OLD\/boot.js": {
-		"fileType": 64,
+	"\/less\/_functions.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/boot.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/boot-min.js",
+		"inputAbbreviatedPath": "\/less\/_functions.less",
+		"outputAbbreviatedPath": "\/css\/_functions.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
 		},
-	"\/js_OLD\/forgotpassword.js": {
-		"fileType": 64,
+	"\/less\/_variables.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/forgotpassword.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/forgotpassword-min.js",
+		"inputAbbreviatedPath": "\/less\/_variables.less",
+		"outputAbbreviatedPath": "\/css\/_variables.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/jquery-1.11.2.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/jquery-1.11.2.min.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/jquery-1.11.2.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/jquery.nicescroll.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/jquery.nicescroll.min.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/jquery.nicescroll.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/ko.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/ko.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/ko-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/ko.validation.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/ko.validation.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/ko.validation-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/log.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/log.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/log-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/preferences.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/preferences.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/preferences-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/snippet.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/snippet.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/snippet-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/snippetList.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/snippetList.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/snippetList-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/tags.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/tags.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/tags-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/tbs.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/tbs.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/tbs-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js_OLD\/theme.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js_OLD\/theme.js",
-		"outputAbbreviatedPath": "\/js_OLD\/min\/theme-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 0
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
 		},
 	"\/less\/basic.less": {
 		"allowInsecureImports": 0,
@@ -4064,7 +4026,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/colors.less": {
+	"\/less\/buttons.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4072,8 +4034,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/colors.less",
-		"outputAbbreviatedPath": "\/css\/colors.css",
+		"inputAbbreviatedPath": "\/less\/buttons.less",
+		"outputAbbreviatedPath": "\/css\/buttons.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4084,7 +4046,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/floats.less": {
+	"\/less\/content.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4092,8 +4054,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/floats.less",
-		"outputAbbreviatedPath": "\/css\/floats.css",
+		"inputAbbreviatedPath": "\/less\/content.less",
+		"outputAbbreviatedPath": "\/css\/content.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4104,7 +4066,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/main-container.less": {
+	"\/less\/float.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4112,8 +4074,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/main-container.less",
-		"outputAbbreviatedPath": "\/css\/main-container.css",
+		"inputAbbreviatedPath": "\/less\/float.less",
+		"outputAbbreviatedPath": "\/css\/float.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4124,7 +4086,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/main-list.less": {
+	"\/less\/form.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4132,8 +4094,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/main-list.less",
-		"outputAbbreviatedPath": "\/css\/main-list.css",
+		"inputAbbreviatedPath": "\/less\/form.less",
+		"outputAbbreviatedPath": "\/css\/form.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4144,7 +4106,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/main-sidebar.less": {
+	"\/less\/header.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4152,8 +4114,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/main-sidebar.less",
-		"outputAbbreviatedPath": "\/css\/main-sidebar.css",
+		"inputAbbreviatedPath": "\/less\/header.less",
+		"outputAbbreviatedPath": "\/css\/header.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4164,7 +4126,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/preferences.less": {
+	"\/less\/list.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4172,8 +4134,48 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/preferences.less",
-		"outputAbbreviatedPath": "\/css\/preferences.css",
+		"inputAbbreviatedPath": "\/less\/list.less",
+		"outputAbbreviatedPath": "\/css\/list.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/modal.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/modal.less",
+		"outputAbbreviatedPath": "\/css\/modal.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/notifications.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/notifications.less",
+		"outputAbbreviatedPath": "\/css\/notifications.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4204,7 +4206,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/sizes.less": {
+	"\/less\/scrollbar.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -4212,8 +4214,28 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/sizes.less",
-		"outputAbbreviatedPath": "\/css\/sizes.css",
+		"inputAbbreviatedPath": "\/less\/scrollbar.less",
+		"outputAbbreviatedPath": "\/css\/scrollbar.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/sidebar.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/sidebar.less",
+		"outputAbbreviatedPath": "\/css\/sidebar.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -4285,17 +4307,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
-		},
-	"\/modelo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 532254,
-		"inputAbbreviatedPath": "\/modelo.png",
-		"outputAbbreviatedPath": "\/modelo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/package.json": {
 		"fileType": 524288,
